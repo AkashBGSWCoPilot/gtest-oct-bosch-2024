@@ -21,6 +21,7 @@ add_executable(
   TestCases.cpp
  StringCalculator.Tests.cpp
 StringCalculator.cpp
+StringCalculatorFixture.Test.cpp
  )
 target_link_libraries(
   unittestcode
