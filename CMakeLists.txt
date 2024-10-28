@@ -18,7 +18,7 @@ enable_testing()
 add_compile_options("--coverage")
 add_executable(
   unittestcode
-TestCases.cpp
+  TestCases.cpp
  
  )
 target_link_libraries(
@@ -28,4 +28,4 @@ target_link_libraries(
 )
 
 include(GoogleTest)
-gtest_discover_tests(cleancode)
+gtest_discover_tests(unittestcode)
