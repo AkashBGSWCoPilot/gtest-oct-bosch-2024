@@ -1,0 +1,7 @@
+﻿TestCaseName,TestCase Scenario / Description,Input / Precondition,"	Expected Output"
+Test_SpeedThreshold_LessThan_1,Test when _speedThreshold is less than 1,_speedThreshold = 0,"Output: ""_speedThreshold value must be in the range {1-100} 0"""
+Test_SpeedThreshold_GreaterThan_100,Test when _speedThreshold is greater than 100,_speedThreshold = 101,"Output: ""_speedThreshold value must be in the range {1-100} 101"""
+Test_CurrentSpeed_LessThan_Threshold,Test when current speed is less than _speedThreshold,"_speedThreshold = 50, currentSpeedInKmph = 40","Output: ""Current Speed In Kmph 40"""
+Test_CurrentSpeed_GreaterThan_Threshold,Test when current speed is greater than _speedThreshold,"_speedThreshold = 50, currentSpeedInKmph = 60","Output: ""Current Speed In Kmph 60"", ""Current Speed in Miles _______"""
+Test_CloudCommunicator_StatusCode_OK,Test when cloud communicator returns a status code less than or equal to 400,"_speedThreshold = 50, currentSpeedInKmph = 60, cloudCommunicator.pushMessage() = 200","Output: ""Current Speed In Kmph 60"", ""Current Speed in Miles ______"""
+Test_CloudCommunicator_StatusCode_Error,Test when cloud communicator returns a status code greater than 400,"_speedThreshold = 50, currentSpeedInKmph = 60, cloudCommunicator.pushMessage() = 500","Output: ""Current Speed In Kmph 60"", ""Current Speed in Miles 37.2823"", ""Error In Communication Unable to Contact Server Current Speed in Miles _________"""
